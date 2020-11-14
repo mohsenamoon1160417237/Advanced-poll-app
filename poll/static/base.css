@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	line-height: 1.6;
+}
+
+.btn{
+
+	padding: 10px 20px;
+	background: #2874A6;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid #2874A6;
+	outline: none;
+}
+
+
+
+.btn:hover{
+
+	background: #5DADE2;
+	border: 1px solid #5DADE2;
+	color: black;
+}
+
+
+.btn:active{
+
+	border: 1px solid #5DADE2;
+	
+}
+
+
+
+
+#navbar{
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 30px;
+	opacity: 0.9;
+	background: #d6eaf8;
+	height: 60px;
+}
+
+#navbar .title{
+
+	margin-left: 30px;
+	font-weight: 5;
+}
+
+ul{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-right: 20px;
+
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+li{
+
+	padding: 16px 25px;
+	font-size: 21px;
+	margin-bottom: 5px;
+}
+
+#navbar a:hover{
+
+	border-bottom: 1px solid #5DADE2;
+}
+
+#navbar a{
+
+	padding: 10px 0;
+	font-size: 18px;
+}
+
+.username{
+
+	font-size: 22px;
+	margin-left: 15px;
+}
+
+.username:hover{
+
+	border-bottom: none;
+}
+
+.current{
+
+	background: white;
+	opacity: 0.9;
+}
+
+.small-btn{
+
+	padding: 7px 15px;
+	background: #2874A6;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid #2874A6;
+
+}
+
+.small-btn:hover{
+	background: #5DADE2;
+	border: 1px solid #5DADE2;
+	color: black;
+	
+}
+
+.btn-vote{
+
+	padding: 10px 20px;
+	background: white;
+	color: black;
+	border-radius: 5px;
+	border: 1px solid white;				
+}
+
+.btn-vote:hover{
+
+	background: #5DADE2;
+	border: 1px solid #5DADE2;
+	color: black;
+}

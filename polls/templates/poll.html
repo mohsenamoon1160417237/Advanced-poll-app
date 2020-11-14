@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'poll.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block title %}
+Vote to "{{ poll.name }}" | Poll
+{% endblock %}
+
+
+{% block content %}
+
+<div id="poll">
+
+<h1>{{ poll.name }}</h1>
+
+<div class="poll-question">
+  <h4>{{ poll.question }}</h4>
+</div>
+
+
+
+<div id="choices">
+
+  {% for choice in choices %}
+    <div class="choice">
+    	<div class="group">
+      <label>{{ choice.field }}</label>{% if request.user in choice.users.all %}<i class="fa fa-check" style="font-size:24px"></i>{% endif %}
+  </div>
+  	{% if not request.user in choice.users.all %}
+    <form class="choice-form" action="{% url 'choice' choice.id choice.slug %}" method="post">
+      {% csrf_token %}
+      
+      <button type="submit" class="btn-vote vote">Vote</button>
+    </form>
+    {% else %}
+    <div class="voted-group">
+      <form action="{% url 'unvote' choice.id choice.slug %}" method="post">
+      	{% csrf_token %}
+      	<button type="submit" class="btn-vote">Unvote</button>
+      </form>
+  	</div>
+    {% endif %}
+</div>
+  {% endfor %}
+</div>
+</div>
+
+{% endblock %}

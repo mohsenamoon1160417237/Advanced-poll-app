@@ -1,0 +1,79 @@
+#home{
+
+	margin-top: 130px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+
+.poll{
+
+	border: 1px solid #d6eaf8;
+	border-radius: 5px;
+	height: 100%;
+	width: 400px;
+	background: #d6eaf8;
+	padding: 25px 30px;
+	padding-bottom: 35px;
+	padding-top: 15px;
+	text-align: center;
+
+}
+
+
+
+h1{
+
+	margin-bottom: 70px;
+	font-size: 38px;
+	font-weight: 20;
+}
+
+.title{
+
+	font-size: 25px;
+	margin-bottom: 15px;
+
+}
+
+.question{
+
+	font-size: 20px;
+	margin-bottom: 20px;
+
+}
+
+
+.vote{
+
+	margin-right: 5px;
+}
+
+
+.voted .name{
+
+	margin-right: 10px;
+
+}
+
+.poll i{
+
+	color: green;
+	margin-top: 10px;
+
+}
+
+.voted-text{
+
+	font-size: 	18px;
+	font-weight: bold;
+
+}
+
+.voted-check{
+
+	margin-bottom: 20px;
+	margin-left: -28px;
+}

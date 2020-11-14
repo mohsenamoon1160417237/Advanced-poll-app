@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'register.css' %}">
+{% endblock %}
+
+{% block title %}
+SignUp | Poll
+{% endblock %}
+
+{% block content %}
+
+<div id="register">
+<div class="register">
+<h1>Register</h1>
+<p class="content">Fill out the form to create an account</p>
+
+<div class="form">
+<form action="." method="post">
+  {% csrf_token %}
+
+  {{ form.username.errors }}
+  <div class="form-group">
+  <label>{{ form.username.label_tag }}</label>
+  <input class="field {% if form.username.errors %}error-field{% endif %}" type="text" name="{{ form.username.html_name }}">
+  </div>
+
+  <div class="form-group">
+  <label>{{ form.password1.label_tag }}</label>
+  <input class="field {% if form.password1.errors %}error-field{% endif %}" type="password" name="{{ form.password1.html_name }}">
+  </div>
+
+  {{ form.password2.errors }}
+  <div class="form-group">
+  <label>{{ form.password2.label_tag }}</label>
+  <input class="field {% if form.password2.errors %}error-field{% endif %}" type="password" name="{{ form.password2.html_name }}">
+  </div>
+
+  <button class="btn" type="submit">Create account</button>
+
+</form>
+</div>
+</div>
+</div>
+
+{% endblock %}

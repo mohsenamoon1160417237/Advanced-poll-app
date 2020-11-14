@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block head %}
+	{% endblock %}
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale">
+	<meta http-equiv="X-UA-Compatible" , content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div id="navbar">
+	  <h1 class="title">Poll</h1>
+	  <nav class="navbar">
+	  	<ul>
+	  	  {% if request.user.is_authenticated %}
+	  	  	<li class="{% if section == 'create' %}current{% endif %}"><a href="{% url 'create_poll' %}">Create</a></li>
+	  	    <li class="{% if section == 'home' %}current{% endif %}"><a href="{% url 'home' %}">Home</a></li>
+	  	    <li><a href="{% url 'logout' %}">Logout</a></li>
+	  	    <li class="username">{{ request.user.username }}</li>
+	  	  {% else %}
+	  	    <li class="{% if section == 'login' %}current{% endif %}"><a href="{% url 'login' %}">Login</a></li>
+	  	    <li class="{% if section == 'register' %}current{% endif %}"><a href="{% url 'register' %}">Sign Up</a></li>
+	  	  {% endif %}
+	  	</ul>
+	  </nav>
+	</div>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

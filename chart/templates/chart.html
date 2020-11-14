@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'chart.css' %}">
+  <script type="text/javascript" src="{% static 'js/fusioncharts.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/fusioncharts.charts.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/themes/fusioncharts.theme.fusion.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+{{ poll.name }} results | Poll
+{% endblock %}
+
+{% block content %}
+
+	<div id="myFirstChart-container">
+		{{ output|safe }}
+	</div>	
+
+
+{% endblock %}
+

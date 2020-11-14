@@ -1,0 +1,91 @@
+#register{
+
+	background: #1F618D;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 140px;
+}
+
+.register{
+
+	background: white;
+	height: 580px;
+	width: 450px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+
+h1{
+
+	font-size: 35px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: 5;
+}
+
+
+.content{
+
+	margin-bottom: 20px;
+	font-size: 17px;
+}
+
+label{
+
+	text-align: left;
+	display: block;
+	margin-bottom: 10px;
+	color: black;
+	opacity: 0.8;
+}
+
+input{
+
+	width: 100%;
+	padding: 15px 20px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	margin-bottom: 40px;
+}
+
+input:last-child{
+
+	margin-bottom: 25px;
+}
+
+input:focus{
+
+	outline: none;
+	border: 1px solid #5dade2;
+}
+
+.btn{
+
+	width: 100%;
+	margin-top: 15px;
+}
+
+.btn:hover{
+
+	background: #5DADE2;
+	border: 1px solid #5DADE2;
+	color: black;
+}
+
+.errorlist li{
+
+	font-size: 17px;
+	color: red;
+	padding-top: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.error-field{
+
+	border: 1px solid red;
+}

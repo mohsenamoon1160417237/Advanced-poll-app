@@ -1,0 +1,8 @@
+#myFirstChart-container{
+
+	margin-top: 140px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}

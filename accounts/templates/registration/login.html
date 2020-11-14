@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+{% endblock %}
+
+{% block title %}
+Login | Poll
+{% endblock %}
+
+
+{% block content %}
+
+<div id="body">
+<div class="content">
+<h2 class="title">Login</h2>
+<p class="p">Fill out the form to login to home page</p>
+
+<form action="." method="post">
+  {% csrf_token %}
+  {% if form.errors %}<p class="error">Wrong username or password</p>{% endif %}
+    
+    <p class="label">{{ form.username.label_tag }}</p>
+    <input class="field" name="{{ form.username.html_name }}" type="text">
+
+
+    <p class="label">{{ form.password.label_tag }}</p>
+    <input class="field" type="password" name="{{ form.password.html_name }}">
+    	
+  <br>
+
+  <input type="hidden" name="next" value="{{ next }}">
+  <button type="submit" class="btn">Login</button>
+</form>
+</div>
+</div>
+
+{% endblock %}
